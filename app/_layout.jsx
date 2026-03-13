@@ -1,3 +1,5 @@
+//This _layout.jsx is the file that helps stack each page on each other and contains styling for the header in the app.
+
 import { Stack } from "expo-router";
 
 export default function RootLayout() {

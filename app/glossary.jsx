@@ -1,6 +1,7 @@
+//This glossary.jsx file contains everything that is located in the "second" or "glossary" page of the app.
+
 import { useState } from "react";
-import { FlatList, Pressable, StyleSheet, Text, View, Image } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { FlatList, Pressable, StyleSheet, Text, View, Image, ImageBackground } from "react-native";
 
 const DATA = [
   {
@@ -28,26 +29,37 @@ function Panel({ character }) {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <View style={styles.panel}>
-      <View style={styles.headerRow}>
-        <Text style={styles.title}>{character.title}</Text>
-        <Image source={character.image} style={styles.images} resizeMode="contain"/>
-      </View>
 
-      {isActive ? (
-        <Text style={styles.info}>{character.info}</Text>
-      ) : (
-        <Pressable style={styles.button} onPress={() => setIsActive(true)}>
-          <Text style={styles.buttonText}>Info</Text>
-        </Pressable>
-      )}
-    </View>
+        <ImageBackground
+                source={require("../assets/images/triforce.jpg")}
+                style={styles.panel}
+                resizeMode="cover"
+        >
+          <View style={styles.headerRow}>
+          <Text style={styles.title}>{character.title}</Text>
+          <Image source={character.image} style={styles.images} resizeMode="contain"/>
+          </View>
+
+          {isActive ? (
+         <Text style={styles.info}>{character.info}</Text>
+       ) : (
+         <Pressable style={styles.button} onPress={() => setIsActive(true)}>
+           <Text style={styles.buttonText}>Info</Text>
+         </Pressable>
+       )}
+
+        </ImageBackground>
   );
 }
 
 export default function Accordion() {
   return (
-    <SafeAreaView style={styles.container}>
+
+    <ImageBackground
+                source={require("../assets/images/background2.jpg")}
+                style={styles.container}
+                resizeMode="cover"
+        >
       <Text style={styles.heading}>Glossary Screen</Text>
       <Text style={styles.subheading}>Discover more about each character in The Legend of Zelda</Text>
 
@@ -57,8 +69,9 @@ export default function Accordion() {
         renderItem={({ item }) => <Panel character={item} />}
         contentContainerStyle={{ paddingBottom: 16 }}
       />
-    </SafeAreaView>
-  );
+
+     </ImageBackground>
+  )
 }
 
 
@@ -71,13 +84,27 @@ const styles = StyleSheet.create({
   heading: {
     fontSize: 22,
     fontWeight: "bold",
+    color: "gold",
     marginHorizontal: 16,
     marginBottom: 4,
+    paddingTop: 5,
+    paddingBottom: 5,
+    marginRight: 240,
+    textAlign: "center",
+    borderWidth: 3,
+    borderColor: "green",
+    borderRadius: 15,
   },
   subheading: {
     fontSize: 14,
     marginHorizontal: 16,
     marginBottom: 8,
+    borderWidth: 2,
+    marginRight: 45,
+    textAlign: "center",
+    color: "gold",
+    borderColor: "green",
+    borderRadius: 15,
   },
   panel: {
     backgroundColor: "#f9fafb",
@@ -93,9 +120,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   title: {
-    fontSize: 16,
+    fontSize: 30,
     fontWeight: "600",
     flex: 1,
+    color: "gold",
+    backgroundColor: "green",
+    borderWidth: 3,
+    borderColor: "black",
+    borderRadius: 15,
+    textAlign: "center",
+    marginLeft: -10,
+    marginRight: -10,
   },
   images: {
     height: 300,
@@ -105,9 +140,11 @@ const styles = StyleSheet.create({
   button: {
     marginTop: 8,
     backgroundColor: "#660708",
+    borderWidth: 2,
+    boderColor: "black",
+    borderRadius: 15,
     paddingVertical: 6,
     paddingHorizontal: 10,
-    borderRadius: 4,
     alignSelf: "flex-start",
   },
   buttonText: {
@@ -118,5 +155,11 @@ const styles = StyleSheet.create({
   info: {
     marginTop: 8,
     fontSize: 14,
+    borderWidth: 2,
+    borderRadius: 10,
+    borderColor: "rgba(145, 7, 7, 0.8)",
+    color: "white",
+    textAlign: "center",
+    padding: 10,
   },
 });
