@@ -5,8 +5,8 @@ Zelda franchise.
 ---
 
 ## Videos
-- [Code Demo](Youtube Link to demo here)
-- [Code Walkthrough](Youtube link to walktrhough here.)
+- [Code Demo](https://youtube.com/shorts/JzCD1E9tXqI)
+- [Code Walkthrough](https://youtu.be/MJd-OKNnR9I)
 
 ## Citations
 - [Zelda Wiki](https://zeldawiki.wiki/wiki/Link) GNU Free Documentation License 1.3
