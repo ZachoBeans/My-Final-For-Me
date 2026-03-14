@@ -8,19 +8,31 @@ const DATA = [
     id: "1",
     title: "Link",
     image: require("../assets/images/link.webp"),
-    info: "This is Link. He is the main protagonist in almost all of the Zelda games. He has varrying appearances througout the games. He is technically ambidextrious but usually uses his sword in his left hand and his sheild in his right hand.",
+    info: "This is Link. He is the main protagonist in almost all of the Zelda games. He has varrying appearances througout the games. He is technically ambidextrious but usually uses his sword in his left hand and his sheild in his right hand. He has the triforce of courage.",
   },
   {
     id: "2",
     title: "Zelda",
     image: require("../assets/images/zelda.png"),
-    info: "This is Zelda. She is usually the character that the game revolves around. It's not always 'save the princess' becauase she's a badass in like all of the games, but it sometimes does come down to Ganondorf kidnapping Zelda and Link having to save her. Throughout the years of the games developments, Zelda has become more of a force to rekon with.",
+    info: "This is Zelda. She is usually the character that the game revolves around. It's not always 'save the princess' becauase she's a badass in like all of the games, but it sometimes does come down to Ganondorf kidnapping Zelda and Link having to save her. Throughout the years of the games developments, Zelda has become more of a force to rekon with. She has the triforce of wisdom.",
   },
   {
     id: "3",
+    title: "Ganon",
+    image: require("../assets/images/ganon.webp"),
+    info: "This is Ganondorf. Also known as 'Ganon'. He is the king of the Gerudo, the only male to be born out of Gerudo in a hundred years. Ganondorf is his human form, and Ganon is also technically the same character, but in his best form. He has the triforce of power which is what gives him the ability to change into Ganon.",
+  },
+  {
+    id: "4",
     title: "Sheik",
     image: require("../assets/images/sheik.webp"),
-    info: "This is Sheik. Zelda's alter ego for only ONE GAME. Such a badass character for one game.",
+    info: "This is Sheik. Zelda's alias for only ONE GAME. Such an amazing character to only be used once. She appears in The Legend of Zelda Ocarina of Time. A lot of kids that were my age when we played the game thought she was a 'dude' until it was revealed later in the game that she's actually Zelda.",
+  },
+  {
+    id: "5",
+    title: "Impa",
+    image: require("../assets/images/impa.webp"),
+    info: "This is Impa. She has so many different roles throughout the Zelda games. She's been Zelda's personal guardian, Zelda's 'assistant', a highly ranked Sheikah member, and often acts like a ninja. She helps provide Link with guidance on his adventures into Hyrule. "
   },
 ];
 

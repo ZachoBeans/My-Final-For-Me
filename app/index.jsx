@@ -6,9 +6,6 @@ import { useRouter } from "expo-router";
 import { StyleSheet, Text, Pressable, ImageBackground} from "react-native";
 
 
-
-const buttonImage = require("../assets/images/symbol.webp")
-
 export default function Home() {
   const router = useRouter();
    
@@ -20,7 +17,7 @@ export default function Home() {
       resizeMode="cover"
       >
         <ImageBackground
-          source={buttonImage}
+          source={require("../assets/images/symbol.webp")}
           style={styles.buttonBackground}
           resizeMode="contain"
   >
